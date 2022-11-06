@@ -10,8 +10,5 @@
 
 
         //public List<Auto> Autos { get; set; }
-
-        duration.
-
     }
 }

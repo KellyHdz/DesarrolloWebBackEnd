@@ -1,7 +1,5 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApiAlumnos.DTOs;
 using WebApiAlumnos.Entidades;
 
 namespace WebApiAlumnos.Controllers
@@ -20,7 +18,7 @@ namespace WebApiAlumnos.Controllers
         }
 
 
-        [HttpGet
+        [HttpGet]
         public async Task<ActionResult<List<Auto>>> Get()
         {
             return await dBContext.Autos.Include(x => x.Agencias).ToListAsync();
@@ -34,10 +32,10 @@ namespace WebApiAlumnos.Controllers
             };
         }*/
 
-        public async Task<ActionResult<List<Auto>>> Get()
+       /* public async Task<ActionResult<List<Auto>>> Get()
         {
             return await dBContext.Auto.ToListAsync();
-        }
+        }*/
 
         [HttpPost]
         public async Task<ActionResult> Post(Auto auto)
